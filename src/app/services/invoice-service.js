@@ -10,9 +10,11 @@ export const fetchInvoices = async (token, body) => {
     body: JSON.stringify(body),
   })
 
+  const data = await response.json()
+
   if (!response.ok) {
     throw new Error('Error fetching invoices')
   }
 
-  return await response.json()
+  return data;
 }

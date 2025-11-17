@@ -78,7 +78,7 @@ export default function Invoice() {
       key: "action",
       render: (_, record) => (
         <Button type="link" onClick={() => handleDetail(record.id)}>
-          Detay
+          Detail
         </Button>
       ),
       responsive: ["xs", "sm", "md", "lg"],
@@ -115,7 +115,7 @@ export default function Invoice() {
         rowKey="id"
         loading={loading}
         pagination={{ pageSize: 2 }}
-        scroll={{ x: "max-content" }} // yatay kaydırma aktif
+        scroll={{ x: "max-content" }}
       />
     </div>
   );
